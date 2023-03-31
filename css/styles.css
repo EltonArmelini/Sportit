@@ -1,0 +1,22 @@
+:root{
+    /* DEFINICION DE VARIABLES PARA COLORES */
+    --primary-color:  #8B48BF; 
+    --secondary-color:  ; 
+    --decoration-button-color:#8B48BFB2; 
+    --decoration-color: #242E5299;
+    --title-weight: 700; 
+    --secondary-title-weight:500;
+    --paragraph-weight: 300;
+}
+*{
+    /* box-sizing: border-box;
+    margin: 0;
+    padding: 0; */
+    font-family: 'Be Vietnam Pro', sans-serif;
+
+    /* Para no hacerlo en cada uno de los items de las listas desordenadas */
+    list-style: none;
+    text-decoration: none;
+}
+
+
