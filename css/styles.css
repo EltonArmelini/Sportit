@@ -51,7 +51,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1em 1em;
+    padding: 0 1em;
 }
 .navbar__menu{
     display: none;
