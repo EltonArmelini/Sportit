@@ -1,22 +1,295 @@
 :root{
     /* DEFINICION DE VARIABLES PARA COLORES */
+    --blue-darker: #232C50;
     --primary-color:  #8B48BF; 
-    --secondary-color:  ; 
+    --primary-color-opacity: rgba(139, 72, 191, 0.3);
+    --secondary-color:  #232851; 
     --decoration-button-color:#8B48BFB2; 
     --decoration-color: #242E5299;
+    --text-color:#000000;
+    --text-color-gray:#B3B2B7;
+    --text-white-color: #fff;
+    --background-skyblue: #3CDDF3;
+    --darkest-color:#1E1E26;
+    /* DEFINICION DE PESOS PARA FUENTES */
     --title-weight: 700; 
     --secondary-title-weight:500;
     --paragraph-weight: 300;
 }
-*{
-    /* box-sizing: border-box;
-    margin: 0;
-    padding: 0; */
-    font-family: 'Be Vietnam Pro', sans-serif;
 
-    /* Para no hacerlo en cada uno de los items de las listas desordenadas */
+/* Para no hacerlo en cada bloque*/
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Be Vietnam Pro', sans-serif;
     list-style: none;
     text-decoration: none;
+}
+/* global Element */
+.button__primary{
+    background-color: var(--primary-color);
+    color: var(--text-white-color);
+    font-weight: var(--paragraph-weight);
+    border-radius: 3.125em;
+    padding: 0.5em 2em;
+}
+.logo-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+}
+.logo-text{
+    color: var(--blue-darker);
+    margin: 0.3em;
+}
+
+
+/* NAVBAR STYLES */
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2em 4em;
+}
+.navbar__menu{
+    display: none;
+}
+.navbar::after{
+    font: var(--fa-font-solid);
+    content: "\f0c9";
+    font-weight: 900;
+    font-size: 2rem;
+}
+
+
+/* MAIN BANNER STYLES */
+.banner{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    margin: 2em;
+}
+.banner > *{
+    text-align: right;
+}
+.banner__img{
+    width: 80vw;
+}
+.banner__title{
+    color: #232C50;
+    font-weight: var(--title-weight);
+}
+.banner__title{
+    color: #232C50;
+    font-weight: var(--title-weight);
+}
+.banner__text{
+    color: var(--text-color);
+    font-weight: var(--secondary-title-weight);
+    margin:1em 0;
+}
+.button--banner{
+    background-color: var(--primary-color);
+    color: var(--text-white-color);
+    font-weight: var(--paragraph-weight);
+    border-radius: 3.125em;
+    padding: 0.5em 2em;
+}
+
+
+/* PROS INFORMATION SECTION STYLES */
+.prosInformation{
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+.prosInformation__header{
+    background-color: var(--background-skyblue);
+    padding: 2em 1em;
+    color: var(--text-white-color);
+}
+.prosInformation__header-title{
+    font-weight: var(--title-weight);
+    font-size: 2.25em;
+    margin-bottom: 2em;
+}
+.prosInformation__header-text{
+    font-weight: var(--secondary-title-weight-weight);
+    font-size: 1em;
+}
+
+/* PROS INFORMATION ITEMS SECTION STYLES */
+.itemContainer{
+    font-size: 1rem;
+    margin-left: 2em;
+}
+.itemContainer__item{
+    margin-bottom: 2em;
+}
+.itemContainet__item-header{
+    font-weight: var(--secondary-title-weight);
+    background-color: var(--primary-color-opacity);
+    border-top-left-radius: 2em;
+    border-bottom-left-radius: 2em;
+}
+.itemContainet__item-header > *{
+    display: inline-block;
+}
+.itemContainer__item-index{
+    background-color: var(--primary-color);
+    color: var(--text-white-color);
+    padding: 0.625em 1.25em;
+    border-radius: 2em;
+}
+.itemContainer__item-title{
+    color: var(--secondary-color);
+}
+.itemContainer__item-text{
+    margin-left: .75em;
+    margin-top: 2em;
+    color: var(--text-color-gray);
+}
+
+/* BEST MONTH SECTION */
+.bestSectionContainer{
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+
+    padding: 4em 1.5rem ;
+}
+.bestSectionContainer__title{
+    text-align: center;
+    font-weight: var(--title-weight);
+    color: #242E53;
+    font-size: 2.5rem;
+    margin-bottom: 2.5em;
+}
+.cardContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.cardContainer--card{
+    display: none;
+    background-color: #FAFAFA;
+    position: relative;
+    margin-bottom: 5em;
+    text-align: center;
+    padding: 1.5em;
+}
+
+.card__img{
+    border-radius: 50%;
+    position: absolute;
+    top:-2rem;
+}
+.card__title{
+    font-weight: var(--title-weight);
+    font-size: 1.2rem;
+    padding: 1em;
+    margin-top: 0.5em;
+    color: #3F4868;
+}
+.card__text{
+    color: #B9B9C1;
+    font-weight: var(--secondary-title-weight);
+    font-size: 1rem;
+}
+.cardContainer--card:nth-child(even){
+    display: flex;
+}
+
+/* PRE FOOTER STYLES */
+.preFooter{
+    background-color: var(--background-skyblue);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3em;
+}
+.preFooter__title{
+    color: var(--text-white-color);
+    font-weight: var(--title-weight);
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 1em;
+}
+.button__primary--darker{
+    background-color: var(--blue-darker);
+}
+
+
+/* FOOTER STYLES */
+/* ORDER ITEMS FROM FOOTER */
+.footer>:nth-child(4){
+    order: -1;
+}
+.footer{
+    display: flex;
+    flex-direction: column-reverse;
+    /* justify-content: center;
+    align-items: center; */
+    background-color: var(--darkest-color);
+    color: var(--text-white-color);
+    padding: 2.5em;
+}
+.footer__socialContainer{
+    display: flex;
+    flex-direction: column-reverse;
+}
+.logo-text--footer{
+    color: var(--text-white-color);
+    order: -2;
+}
+.footer__socialIcons-Items{
+    font-size: 1.5rem;
+
+    display: flex;
+    justify-content: space-between;
+}
+.form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2.5em ;
+}
+.form__input{
+    border: none;
+    border-radius: 3.125em;
+    padding: 0.5em 1em;
+    margin-right: .4em;
+    height: 2.8em;
+    width: 80%;
+}
+.button__primary--form{
+    border: none;
+}
+.footer__nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1.5em;
+}
+.footer__list{
+    font-weight: var(--paragraph-weight);
+}
+.footer__link{
+    margin-bottom: 1em ;
+}
+
+.footer__copyRight{
+    color: #8C8C94;
+    display: block;
+    font-weight: var(--secondary-title-weight);
+    font-size: .8em;
+    margin: 1em;
+    text-align: center;   
 }
 
 

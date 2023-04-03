@@ -26,79 +26,87 @@
   </head>
   <body>
     <header>
-      <nav>
-        <h1>
-          <img src="img/Logo.svg" alt="LogoSportit" />
-          sportit
+      <nav class="navbar">
+        <h1 class="logo-container">
+          <img class="logo-img" src="img/Logo.svg" alt="LogoSportit" />
+          <span class="logo-text" >sportit</span> 
         </h1>
-        <ul>
+        <ul class="navbar__menu" >
           <li>
-            <a href="#" target="_blank" rel="noopener noreferrer">Sports</a>
+            <a class="navbar__link"  href="#" target="_blank" rel="noopener noreferrer">Sports</a>
           </li>
           <li>
-            <a href="#" target="_blank" rel="noopener noreferrer">Products</a>
+            <a class="navbar__link" href="#" target="_blank" rel="noopener noreferrer">Products</a>
           </li>
           <li>
-            <a href="#" target="_blank" rel="noopener noreferrer">About Us</a>
+            <a class="navbar__link" href="#" target="_blank" rel="noopener noreferrer">About Us</a>
           </li>
           <li>
-            <a href="#" target="_blank" rel="noopener noreferrer">Trainning</a>
+            <a class="navbar__link" href="#" target="_blank" rel="noopener noreferrer">Trainning</a>
           </li>
           <li>
-            <a href="#" target="_blank" rel="noopener noreferrer">Community</a>
+            <a class="navbar__link" href="#" target="_blank" rel="noopener noreferrer">Community</a>
           </li>
+          <a class="navbar__link navbar__link--buttom "href="" target="_blank">Contact</a>
         </ul>
-        <a href="" target="_blank">Contact</a>
       </nav>
     </header>
     <main>
-      <!-- MAIN BANNER  -->
-      <section>
-        <img src="img/banner-img.png" alt="BannerImage" />
-        <h2>LIVE: Follow the Telcel Huawei Mexico Open 2022 for free</h2>
-        <p>
+      <!-- MAIN: BANNER  -->
+      <section class="banner" >
+        <img class="banner__img" src="img/banner-img.png" alt="BannerImage" />
+        <h2 class="banner__title" >LIVE: Follow the Telcel Huawei Mexico Open 2022 for free</h2>
+        <p class="banner__text" >
           The final Open of the 2022 World Padel Tour season is underway, don't
           miss out on any of the action!
         </p>
-        <a href="#" target="_blank">Contact</a>
+        <a class="button__primary" href="#" target="_blank">Contact</a>
 
-        <!-- PROS INFORMATION SECTION -->
       </section>
+      
 
-      <!-- MAIN INFORMATION SECTION -->
-      <section>
+      <!-- PROS INFORMATION SECTION -->
+      <section class="prosInformation" >
+
         <!-- HADER INFORMATION SECTION -->
-        <div>
-          <h2>What´s different between pros?</h2>
-          <p>
+        <div class="prosInformation__header" >
+          <h2 class="prosInformation__header-title" >What´s different between pros?</h2>
+          <p class="prosInformation__header-text" >
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
             aliquet consequat purus sit amet sodales. In faucibus ut nisi eu
             dignissim. Vestibulum fringilla velit sed tincidunt tincidunt.
           </p>
         </div>
 
+
         <!-- ITEMS INFORMATION SECTION -->
-        <div>
-          <article>
-            <span>01</span>
-            <h3>Track company-wide progress</h3>
-            <p>
+        <div class="itemContainer" >
+          <article class="itemContainer__item" >
+          <div class="itemContainet__item-header">
+            <span class="itemContainer__item-index" >01</span>
+            <h3 class="itemContainer__item-title" >Track company-wide progress</h3>
+          </div>
+            <p class="itemContainer__item-text" >
               Donec elit est, mattis lacinia arcu eu, efficitur consequat augue.
               Nam tellus sem, tempus pellentesque egestas vitae, efficitur vel
               nulla. Etiam vel orci rutrum, placerat quam eget, consequat dolor.
             </p>
           </article>
 
-          <article>
-            <span>02</span>
-            <h3>Advance built-in reports</h3>
-            <p>Everything you need in one place</p>
+          <article class="itemContainer__item" >
+            <div class="itemContainet__item-header">
+              <span class="itemContainer__item-index" >02</span>
+              <h3  class="itemContainer__item-title" >Advance built-in reports</h3>
+            </div>
+            <p class="itemContainer__item-text" >Donec elit est, mattis lacinia arcu eu, efficitur consequat augue. Nam tellus sem, tempus pellentesque egestas vitae, efficitur vel nulla. Etiam vel orci rutrum, placerat quam eget, consequat dolor.</p>
           </article>
 
-          <article>
-            <span>03</span>
-            <h3>Everything you need in one placef</h3>
-            <p>
+          <article class="itemContainer__item">
+            <div class="itemContainet__item-header">
+              <span class="itemContainer__item-index" >03</span>
+              <h3 class="itemContainer__item-title" >Everything you need in one placef</h3>
+            </div>
+            <p class="itemContainer__item-text" >
               Donec elit est, mattis lacinia arcu eu, efficitur consequat augue.
               Nam tellus sem, tempus pellentesque egestas vitae, efficitur vel
               nulla. Etiam vel orci rutrum, placerat quam eget, consequat dolor.
@@ -107,85 +115,87 @@
         </div>
       </section>
 
-      <!-- BEST SECTION -->
-      <section>
-        <h2>Best of the month</h2>
+      <!-- BEST MONTH SECTION -->
+      <section class="bestSectionContainer" >
+        <h2 class="bestSectionContainer__title" >Best of the month</h2>
         <!-- CARDS CONTAINER -->
-        <div>
+        <div class="cardContainer" >
           <!-- CARDS -->
-          <artcile>
-            <img src="img/sanyo-img.png" alt="SanyoPIC">
-            <h3>Sanyo</h3>
-            <p>Etiam fermentum, nulla eget gravida cursus, purus lectus feugiat mauris, ut suscipit massa ipsum eu neque. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. </p>
+          <artcile class="cardContainer cardContainer--card" >
+            <img class="card__img" src="img/sanyo-img.png" alt="SanyoPIC">
+            <h3 class="card__title" >Sanyo</h3>
+            <p class="card__text" >Etiam fermentum, nulla eget gravida cursus, purus lectus feugiat mauris, ut suscipit massa ipsum eu neque. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. </p>
           </artcile>
 
 
-          <artcile>
-            <img src="img/lebron-img.png" alt="LebronPIC">
-            <h3>Lebron</h3>
-            <p>Etiam fermentum, nulla eget gravida cursus, purus lectus feugiat mauris, ut suscipit massa ipsum eu neque. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. </p>
+          <artcile class="cardContainer cardContainer--card" >
+            <img class="card__img" src="img/lebron-img.png" alt="LebronPIC">
+            <h3 class="card__title" >Lebron</h3>
+            <p class="card__text" >Etiam fermentum, nulla eget gravida cursus, purus lectus feugiat mauris, ut suscipit massa ipsum eu neque. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. </p>
           </artcile>
 
 
-          <artcile>
-            <img src="img/navarro-img.png" alt="LebronPIC">
-            <h3>Navarro</h3>
-            <p>Etiam fermentum, nulla eget gravida cursus, purus lectus feugiat mauris, ut suscipit massa ipsum eu neque. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. </p>
+          <artcile class="cardContainer cardContainer--card" >
+            <img class="card__img" src="img/navarro-img.png" alt="LebronPIC">
+            <h3 class="card__title"  >Navarro</h3>
+            <p class="card__text" >Etiam fermentum, nulla eget gravida cursus, purus lectus feugiat mauris, ut suscipit massa ipsum eu neque. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. </p>
           </artcile>
+          
         </div>
-        <a href="#" target="_blank">Mores</a>
+        <a class="button__primary" href="#" target="_blank">Mores</a>
       </section>
 
       <!-- PRE FOOTER INFORMATION -->
-      <section>
-        <h2>Get to know the best teams of the year</h2>
-        <a href="#"  target="_blank">Go for it</a>
+      <section class="preFooter" >
+        <h2 class="preFooter__title" >Get to know the best teams of the year</h2>
+        <a  class="button__primary button__primary--darker" href="#"  target="_blank">Go for it</a>
       </section>
     </main>
 
     <!-- FOOTER -->
-    <footer>
+    <footer class="footer" >
         <!-- SOCIAL SECTION -->
-        <div>
-          <span> <img src="img/Logo.svg" alt="LogoSportit">sportit</span>
-          <div>
-            <ul>
-              <li><i class="fa-brands fa-square-facebook"></i></li>
-              <li><i class="fa-brands fa-youtube"></i></li>
-              <li><i class="fa-brands fa-twitter"></i></li>
-              <li><i class="fa-brands fa-pinterest"></i></li>
-              <li><i class="fa-brands fa-pinterest"></i></li>
-            </ul>
+        <div class="footer__socialContainer">
+          <div class="logo-container"> 
+            <img class="logo-img" src="img/Logo.svg" alt="LogoSportit">  
+            <span class="logo-text logo-text--footer" >
+              sportit 
+            </span>   
           </div>
+           <div class="footer__socialIconsContainer">
+             <ul class="footer__socialIcons-Items" >
+               <li><i class="fa-brands fa-square-facebook"></i></li>
+               <li><i class="fa-brands fa-youtube"></i></li>
+               <li><i class="fa-brands fa-twitter"></i></li>
+               <li><i class="fa-brands fa-pinterest"></i></li>
+               <li><i class="fa-brands fa-instagram"></i></li>
+             </ul>
+           </div>   
         </div>
 
         <!-- NAVIGATION SECTION -->
-        <div>
-          <ul>
-            <li>Home</li>
-            <li>Pricing</li>
-            <li>Products</li>
-            <li>About Us</li>
+        <div class="footer__nav" >
+          <ul class="footer__list" >
+            <li class="footer__link" >Home</li>
+            <li class="footer__link" >Pricing</li>
+            <li class="footer__link" >Products</li>
+            <li class="footer__link" >About Us</li>
           </ul>
-          <ul>
-            <li>Trainning</li>
-            <li>Community</li>
-            <li>Privacy Policy</li>
+          <ul class="footer__list" >
+            <li class="footer__link"  >Trainning</li>
+            <li class="footer__link"  >Community</li>
+            <li class="footer__link"  >Privacy Policy</li>
           </ul>
 
         </div>
         
         <!-- FORM NEWSLETTER -->
-        <div>
-          <form action="#" method="POST" >
-            <input placeholder="Update in your inbox..."  id="mail-newsletter"  name="mail-newsletter" type="mail">
-            <button type="submit">Go</button>
+        <form class="form"  action="#" method="POST" >
+          <input  class="form__input"   placeholder="Update in your inbox..."  id="mail-newsletter"  name="mail-newsletter" type="mail">
+          <button class="button__primary button__primary--form"  type="submit">Go</button>
+        </form>
 
-          </form>
-          <span>Copyright 2020. All Rights Reserved</span>
-        </div>
-
-
+        <span class="footer__copyRight" >Copyright 2020. All Rights Reserved</span>
     </footer>
 
   </body>
