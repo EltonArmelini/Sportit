@@ -1,16 +1,22 @@
 :root{
     /* DEFINICION DE VARIABLES PARA COLORES */
+    
     --blue-darker: #232C50;
     --primary-color:  #8B48BF; 
-    --primary-color-opacity: rgba(139, 72, 191, 0.3);
+    --primary-color-hover: rgba(139, 72, 191, 0.3);
     --secondary-color:  #232851; 
     --decoration-button-color:#8B48BFB2; 
     --decoration-color: #242E5299;
+    --decoration-colo-hover: rgba(36, 46, 82, 0.6);
     --text-color:#000000;
     --text-color-gray:#B3B2B7;
     --text-white-color: #fff;
+    --color-shadow: rgba(0, 0, 0, 0.25);
     --background-skyblue: #3CDDF3;
+    --background-gray:#FAFAFA;
     --darkest-color:#1E1E26;
+
+
     /* DEFINICION DE PESOS PARA FUENTES */
     --title-weight: 700; 
     --secondary-title-weight:500;
@@ -33,7 +39,12 @@
     font-weight: var(--paragraph-weight);
     border-radius: 3.125em;
     padding: 0.5em 2em;
+    transition: background-color .5s linear;
 }
+.button__primary:hover{
+    background-color: var(--primary-color-hover);
+}
+
 .logo-container{
     display: flex;
     justify-content: center;
@@ -62,7 +73,9 @@
     font-weight: 900;
     font-size: 2rem;
 }
-
+.navbar>.button__primary{
+    visibility: hidden;
+}
 
 /* MAIN BANNER STYLES */
 .banner{
@@ -91,20 +104,11 @@
     font-weight: var(--secondary-title-weight);
     margin:1em 0;
 }
-.button--banner{
-    background-color: var(--primary-color);
-    color: var(--text-white-color);
-    font-weight: var(--paragraph-weight);
-    border-radius: 3.125em;
-    padding: 0.5em 2em;
-}
-
 
 /* PROS INFORMATION SECTION STYLES */
 .prosInformation{
     display: flex;
     flex-direction: column;
-    gap: 2em;
 }
 .prosInformation__header{
     background-color: var(--background-skyblue);
@@ -125,6 +129,7 @@
 .itemContainer{
     font-size: 1rem;
     margin-left: 2em;
+    padding-top: 2em;
 }
 .itemContainer__item{
     margin-bottom: 2em;
@@ -171,11 +176,11 @@
 }
 .cardContainer{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
 }
-.cardContainer--card{
+.cardContainer__card{
     display: none;
     background-color: #FAFAFA;
     position: relative;
@@ -188,6 +193,8 @@
     border-radius: 50%;
     position: absolute;
     top:-2rem;
+    left: 50%;
+    transform: translateX(-50%);
 }
 .card__title{
     font-weight: var(--title-weight);
@@ -201,8 +208,10 @@
     font-weight: var(--secondary-title-weight);
     font-size: 1rem;
 }
-.cardContainer--card:nth-child(even){
+.cardContainer__card:nth-child(even){
     display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 /* PRE FOOTER STYLES */
@@ -221,24 +230,23 @@
     text-align: center;
     margin-bottom: 1em;
 }
-.button__primary--darker{
+.button__primary--pre-footer{
     background-color: var(--blue-darker);
 }
 
-
 /* FOOTER STYLES */
+
 /* ORDER ITEMS FROM FOOTER */
-.footer>:nth-child(4){
-    order: -1;
+.footer__container{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--darkest-color);
+    color: var(--text-white-color);
+    padding: 2.5em;
 }
 .footer{
     display: flex;
     flex-direction: column-reverse;
-    /* justify-content: center;
-    align-items: center; */
-    background-color: var(--darkest-color);
-    color: var(--text-white-color);
-    padding: 2.5em;
 }
 .footer__socialContainer{
     display: flex;
@@ -246,14 +254,27 @@
 }
 .logo-text--footer{
     color: var(--text-white-color);
-    order: -2;
 }
 .footer__socialIcons-Items{
     font-size: 1.5rem;
-
+    margin-top: 1em;
     display: flex;
     justify-content: space-between;
+
 }
+.footer__socialIcons-Items  i{
+
+    color: var(--text-white-color);
+    transition: color .2s linear;
+}
+
+.footer__socialIcons-Items  i:hover{
+    cursor: pointer;
+    color: var(--background-skyblue);
+
+}
+
+
 .form{
     display: flex;
     justify-content: center;
@@ -267,21 +288,25 @@
     margin-right: .4em;
     height: 2.8em;
     width: 80%;
+    transition: box-shadow 0.3s ease;
 }
 .button__primary--form{
-    border: none;
+    border: var(--primary-color) 1px solid;
 }
 .footer__nav{
     display: flex;
     justify-content: space-between;
     padding: 0 1.5em;
 }
-.footer__list{
-    font-weight: var(--paragraph-weight);
-}
-.footer__link{
+.footer__list li{
     margin-bottom: 1em ;
 }
+.footer__link{
+    font-weight: var(--paragraph-weight);
+    color: var(--text-white-color);   
+    transition: color .2s linear;
+}
+
 
 .footer__copyRight{
     color: #8C8C94;
@@ -292,4 +317,162 @@
     text-align: center;   
 }
 
+
+/* Desktop Version */
+
+@media (min-width: 1440px){
+
+    /* NAVBAR DESKTOP */
+    .navbar{
+        display: flex;
+        justify-content: space-around;
+    }
+    .navbar__menu{
+        display: flex;
+    }
+
+    .navbar__link{
+        padding: 1em;
+        color: var(--decoration-color);
+    }
+    .navbar__link:hover{
+        color: var(--decoration-color-hover);
+    }
+    .navbar::after{
+        display: none;
+    }
+    .navbar>.button__primary{
+        visibility: visible;
+    }
+
+    /* BANNER FOR DESKTOP */
+    .banner{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 1.5em 13.5em;
+    }
+    .banner__img{
+        height: 65vh;
+        width: auto;
+    }
+    .banner__information-container>*{
+        margin-bottom: 2em;
+    }
+
+
+    /* PROS SECTION HEADER */
+    .prosInformation__header{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+
+        background-color: var(--primary-color);
+        padding: .8em 3.5em;
+    }
+    .prosInformation__header>*{
+        width: 50%;
+        height: 100%;
+        text-align: left;
+        margin: 0;
+        padding: .5em 2em;
+    }
+
+    /* PROS SECTION ITEMS AND CONTINER */
+    .itemContainer{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap:2em;
+        margin: 0;
+        padding: 2.5em;
+        background-color: var(--background-gray);
+    }
+    .itemContainer__item{
+        width: 45%;
+    }
+    .itemContainet__item-header{
+        font-weight: var(--secondary-title-weight);
+        background-color: unset;
+    }
+    .itemContainer__item-index{
+        background-color: var(--primary-color);
+        color: var(--text-white-color);
+        padding: 0.625em 1.25em;
+        border-radius: 2em;
+        margin-right: 1em;
+    }
+    .itemContainer__item-text{
+        margin-left: 5em;
+        margin-top: .8em;
+    }
+
+    /* BEST MONTH SECTION */
+    .cardContainer{
+        flex-direction: row;
+    }
+    .cardContainer__card{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    /* PRE FOOTER STYLES */
+    .preFooter{
+        background-color: var(--primary-color);
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .preFooter__title{
+        width: 50%;
+        text-align: left;
+    }
+    .button__primary--pre-footer{
+        background-color: var(--text-white-color);
+        color: var(--primary-color);
+        box-shadow: 0px 4px 8px  var(--color-shadow);
+    }
+    .button__primary--pre-footer:hover{
+        background-color: var(--primary-color);
+        color: var(--text-white-color);
+        border: var(--text-white-color) 1px solid;
+    }
+    
+
+    /* FOOTER */
+    .footer{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    .button__primary--form:hover{
+        cursor: pointer;
+        border-color: var(--text-white-color);
+        transition: border .5 linear;
+        background-color: var(--darkest-color);
+    }
+
+    .footer>*{
+        width: 33.3%;
+        padding: 0 3.5em;
+    }
+    .footer__copyRight{
+        text-align: right;
+        margin-right: 4.5em;
+    }
+    .footer__socialContainer{
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .footer__link:hover{
+        color: var(--primary-color);
+    }
+    .form input[type="mail"]:focus{
+        outline: none;
+        box-shadow: 0 0 0 3px var(--primary-color);
+    }
+}
 
